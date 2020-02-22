@@ -6,4 +6,12 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	pass
+	$Camera.add_trauma(0.1)
+	if Input.is_action_pressed("Left"):
+		$Camera.add_trauma(0.5)
+	if Input.is_action_pressed("Right"):
+		$Camera.add_trauma(0.5)
+	if Input.is_action_pressed("Down"):
+		$Camera.add_trauma(0.5)
+	if Input.is_action_pressed("Up"):
+		$Camera.add_trauma(0.5)
